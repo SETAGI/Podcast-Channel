@@ -1,0 +1,55 @@
+/*-------------------------NEWS SECTION------------------------------------*/
+.news {
+  background: $color-back-sections;
+  clip-path: polygon(0 140px, 100% 0, 100% 100%, 0 100%);
+  padding-top: 17%;
+  padding-bottom: 11%;
+
+  h2 {
+    color: $color-font-secondary;
+    text-align: center;
+    margin-bottom: 3%;
+    @include style-sub-titles-desk;
+    color: $color-font-secondary;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+}
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  .news {
+    clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+
+    h2 {
+      font-size: 36px;
+      line-height: 42px;
+      margin-top: 10%;
+      padding: 0 5%;
+    }
+
+    .button {
+      margin-bottom: 13%;
+      margin: 0% 5%;
+    }
+  }
+}
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .news {
+    clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%);
+
+    h2 {
+      font-size: 40px;
+      line-height: 42px;
+    }
+
+    .button {
+      margin-bottom: 13%;
+      margin: 0% 5%;
+    }
+  }
+}

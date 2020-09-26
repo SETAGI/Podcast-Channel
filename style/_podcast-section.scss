@@ -1,0 +1,55 @@
+/*----------------------------BLUE-BACK SECTION------------------------------------*/
+.podcast-section {
+	background: $color-back-sections;
+	transform: skewY(-6deg);
+	padding-bottom: 8%;
+	padding-top: 5%;
+
+	h2 {
+		transform: skewY(6deg);
+		margin: 3.5% 13%;
+		@include style-sub-titles-desk;
+		color: $color-font-secondary;
+	}
+
+	.podcasts {
+		margin: 3% 0%;
+		transform: skewY(6deg);
+		display: grid;
+		grid-gap: 73px;
+		justify-content: center;
+		grid-template-columns: repeat(2, 40.6%);
+		grid-template-rows: repeat(2, auto);
+
+		iframe {
+			width: 100%;
+		}
+	}
+}
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+	@include podcast-section-behavior;
+}
+
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	@include podcast-section-behavior;
+
+	/*the code described in the following line represent the change of font size between the sub-title for phones and tablets in portrait mode*/
+
+	.podcast-section {
+		h2 {
+			font-size: 40px;
+		}
+	}
+}
+
+/*-----------------Tablet landscape section----------------------*/
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+	.podcast-section {
+		h2 {
+			margin: 3.5% 10%;
+			font-size: 44px;
+		}
+	}
+}

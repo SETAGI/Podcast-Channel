@@ -1,0 +1,1074 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*---------Font-Colors----------*/
+/*----------background----------*/
+/*Fonts*/
+/*-----Complete Styles for fonts---*/
+/*------------------------Mixins for Menu Section------------------------*/
+/*Icons "menu open" and "menu close" behavior*/
+/* Menu behavior on Phones and Tablets portrait mode*/
+/*--Complete behavior in phones and tablets portrait mode -  podcast section--*/
+/*------------------------Mixin for history section------------------------*/
+/*appearance of container  and text on Phones and Tablets portrait mode*/
+/*------------------------Mixin for topics section------------------------*/
+/*appearance of images on Phones and Tablets portrait mode*/
+@font-face {
+  font-family: IBMPlexMono;
+  src: url(../Fonts/IMB_Plex_Mono/IBMPlexMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: IBMPlexMono-Medium;
+  src: url(../Fonts/IMB_Plex_Mono/IBMPlexMono-Medium.ttf);
+}
+
+@font-face {
+  font-family: IBMPlexSans;
+  src: url(../Fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: IBMPlexSans-SemiBold;
+  src: url(../Fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf);
+}
+
+/*---------------------------------------DROPDOWN MENU------------------------------------ */
+header {
+  margin-bottom: 8%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1%;
+  position: relative;
+}
+
+header img {
+  width: 36px;
+  position: absolute;
+  top: 10px;
+  left: 5%;
+}
+
+header label {
+  cursor: pointer;
+  display: none;
+}
+
+#btn-menu {
+  display: none;
+}
+
+.menu {
+  padding-right: 5%;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.list a {
+  display: block;
+  padding: 15px;
+  line-height: 24px;
+  text-decoration: none;
+  font-family: "IBMPlexMono";
+  text-align: justify;
+  font-size: 16px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.list a:hover {
+  text-decoration: line-through;
+  color: #00f3bb;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.list a:active {
+  color: #999696;
+  text-decoration: line-through;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  header {
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .menu-close {
+    display: none;
+    margin-right: 4%;
+  }
+  header .menu-open {
+    display: block;
+    margin-right: 4%;
+  }
+  header img {
+    width: 24px;
+  }
+  header .fa-times {
+    font-size: 23px;
+  }
+  header .fa-bars {
+    font-size: 23px;
+  }
+  .menu {
+    position: absolute;
+    padding: 0;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    margin-left: -200%;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+  #btn-menu:checked ~ .menu-open {
+    display: none;
+  }
+  #btn-menu:checked ~ .menu-close {
+    display: block;
+  }
+  .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #0000ec;
+  }
+  .list a {
+    color: #ffffff;
+  }
+}
+
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  header {
+    height: 44px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .menu-close {
+    display: none;
+    margin-right: 4%;
+  }
+  header .menu-open {
+    display: block;
+    margin-right: 4%;
+  }
+  header img {
+    top: 2px;
+  }
+  header .fa-times {
+    font-size: 40px;
+  }
+  header .fa-bars {
+    font-size: 30px;
+  }
+  .menu {
+    position: absolute;
+    padding: 0;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+    margin-left: -200%;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+  #btn-menu:checked ~ .menu-open {
+    display: none;
+  }
+  #btn-menu:checked ~ .menu-close {
+    display: block;
+  }
+  .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #0000ec;
+  }
+  .list a {
+    color: #ffffff;
+  }
+}
+
+/*----------------------------------INTRODUCTION SECTION-----------------------------------*/
+.hero {
+  position: relative;
+  z-index: -1;
+  margin: 3% 13%;
+  margin-top: 6.3%;
+  max-width: 100%;
+}
+
+.hero .mobile {
+  display: none;
+}
+
+.hero .desktop {
+  font-family: "IBMPlexSans";
+  font-size: 64px;
+  color: #060a24;
+  letter-spacing: 0;
+  font-size: 64px;
+}
+
+.hero P {
+  max-width: 56.1%;
+  margin-top: 1%;
+  padding-left: 0.2%;
+  font-family: "IBMPlexMono";
+  text-align: justify;
+  font-size: 16px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.button {
+  margin: 0% 13%;
+  margin-bottom: 6.3%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  background-color: #00f3bb;
+  color: #060a24;
+  font-family: "IBMPlexMono-Medium";
+  font-size: 18px;
+  color: #060a24;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
+  padding: 1% 4%;
+}
+
+.button a:hover {
+  color: #ffffff;
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  .hero {
+    margin: 0% 5%;
+  }
+  .hero .desktop {
+    display: none;
+  }
+  .hero .mobile {
+    display: block;
+    margin-bottom: 10%;
+    font-family: "IBMPlexSans";
+    font-size: 64px;
+    color: #060a24;
+    letter-spacing: 0;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .hero p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 10%;
+  }
+  .button {
+    margin: 0% 5%;
+    margin-bottom: 12%;
+  }
+  .button a {
+    width: 100%;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: center;
+    padding: 5% 0%;
+  }
+}
+
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .hero {
+    margin: 0% 5%;
+  }
+  .hero .desktop {
+    display: block;
+    margin-bottom: 5%;
+    font-size: 37px;
+    line-height: 42px;
+  }
+  .hero .mobile {
+    display: none;
+  }
+  .hero p {
+    max-width: 85%;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 6%;
+  }
+  .button {
+    margin: 0% 5%;
+    margin-bottom: 10%;
+  }
+  .button a {
+    width: 100%;
+    line-height: 22px;
+    font-size: 17px;
+    text-align: center;
+    padding: 2.5% 0%;
+  }
+}
+
+/*-----------------Tablet landscape section----------------------*/
+@media screen and (min-width: 900px) and (max-width: 1255px) {
+  .hero {
+    margin: 3% 10%;
+  }
+  .hero .mobile {
+    display: none;
+  }
+  .hero .desktop {
+    font-size: 49px;
+  }
+  .hero P {
+    max-width: 65%;
+  }
+  .button {
+    margin: 0% 10%;
+    margin-bottom: 6.3%;
+  }
+}
+
+/*----------------------------BLUE-BACK SECTION------------------------------------*/
+.podcast-section {
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  -webkit-transform: skewY(-6deg);
+          transform: skewY(-6deg);
+  padding-bottom: 8%;
+  padding-top: 5%;
+}
+
+.podcast-section h2 {
+  -webkit-transform: skewY(6deg);
+          transform: skewY(6deg);
+  margin: 3.5% 13%;
+  font-family: "IBMPlexSans";
+  font-size: 48px;
+  color: #060a24;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.podcast-section .podcasts {
+  margin: 3% 0%;
+  -webkit-transform: skewY(6deg);
+          transform: skewY(6deg);
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 73px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (40.6%)[2];
+      grid-template-columns: repeat(2, 40.6%);
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+}
+
+.podcast-section .podcasts iframe {
+  width: 100%;
+}
+
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  .podcast-section h2 {
+    font-size: 36px;
+    line-height: 42px;
+    padding-top: 5%;
+    margin: 6%;
+  }
+  .podcast-section .podcasts {
+    display: block;
+    padding-bottom: 20%;
+    margin: 0% 4%;
+  }
+  .podcast-section .podcasts iframe {
+    padding: 2% 0%;
+  }
+}
+
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .podcast-section h2 {
+    font-size: 36px;
+    line-height: 42px;
+    padding-top: 5%;
+    margin: 6%;
+  }
+  .podcast-section .podcasts {
+    display: block;
+    padding-bottom: 20%;
+    margin: 0% 4%;
+  }
+  .podcast-section .podcasts iframe {
+    padding: 2% 0%;
+  }
+  /*the code described in the following line represent the change of font size between the sub-title for phones and tablets in portrait mode*/
+  .podcast-section h2 {
+    font-size: 40px;
+  }
+}
+
+/*-----------------Tablet landscape section----------------------*/
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .podcast-section h2 {
+    margin: 3.5% 10%;
+    font-size: 44px;
+  }
+}
+
+/*-------------------------HISTORY SECTION------------------------------------*/
+.history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 7%;
+}
+
+.history .photo-phone {
+  width: 31.8%;
+  position: relative;
+  margin-right: 5%;
+}
+
+.history .photo-phone img {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  -webkit-transform: translate(0%, -28%);
+          transform: translate(0%, -28%);
+  width: 100%;
+}
+
+.history .text {
+  width: 37%;
+}
+
+.history .text h2 {
+  margin-bottom: 5%;
+  font-family: "IBMPlexSans";
+  font-size: 48px;
+  color: #060a24;
+  letter-spacing: 0;
+}
+
+.history .text p {
+  margin-bottom: 5%;
+  font-family: "IBMPlexMono";
+  text-align: justify;
+  font-size: 16px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  .history {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .history .text {
+    width: 100%;
+  }
+  .history .text p {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify;
+    margin: 5%;
+  }
+  .history .text h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 5%;
+  }
+  .history .photo-phone {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 150%;
+  }
+  .history .photo-phone img {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -15%);
+            transform: translate(-50%, -15%);
+  }
+}
+
+/*-----------------------------------------Tablet portrait section-------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .history {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /*the code described in the following line represent the change of 
+    font size between the sub-title for phones and tablets in portrait mode*/
+  }
+  .history .text {
+    width: 100%;
+  }
+  .history .text p {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: justify;
+    margin: 5%;
+  }
+  .history .text h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 5%;
+  }
+  .history .text h2 {
+    font-size: 40px;
+  }
+  .history .photo-phone {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 80%;
+  }
+  .history .photo-phone img {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -25%);
+            transform: translate(-50%, -25%);
+    width: 65%;
+  }
+}
+
+/*-----------------Tablet landscape section----------------------*/
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .history .text {
+    width: 50%;
+  }
+  .history .text h2 {
+    font-size: 44px;
+  }
+}
+
+/*-------------------------GUESTS SECTION------------------------------------*/
+.guests {
+  margin-top: 20%;
+}
+
+.guests h2 {
+  margin-bottom: 3%;
+  margin-left: 13%;
+  font-family: "IBMPlexSans";
+  font-size: 48px;
+  color: #060a24;
+  letter-spacing: 0;
+}
+
+.guests .pictures {
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33.3333%)[3];
+      grid-template-columns: repeat(3, 33.3333%);
+  -ms-grid-rows: (50%)[2];
+      grid-template-rows: repeat(2, 50%);
+}
+
+.guests .pictures img {
+  width: 100%;
+}
+
+/*------------------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  .guests {
+    margin-top: 10%;
+  }
+  .guests h2 {
+    font-size: 36px;
+    margin: 3% 6%;
+  }
+  .guests .pictures {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .guests .pictures img {
+    width: 100%;
+  }
+}
+
+/*----------------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .guests {
+    margin-top: 10%;
+  }
+  .guests h2 {
+    font-size: 40px;
+    margin: 3% 6%;
+  }
+  .guests .pictures {
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+  }
+  .guests .pictures img {
+    width: 100%;
+  }
+}
+
+/*----------------------Tablet landscape section----------------------*/
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .guests {
+    margin-top: 13%;
+  }
+  .guests h2 {
+    margin-left: 10%;
+    font-size: 44px;
+  }
+}
+
+/*----------------------big screens section----------------------*/
+@media screen and (min-width: 1600px) {
+  .guests {
+    margin-top: 25%;
+  }
+}
+
+/*-------------------------TOPICS SECTION------------------------------------*/
+.topics {
+  margin-top: 5%;
+}
+
+.topics h2 {
+  margin-bottom: 5%;
+  margin: 5% 13%;
+  font-family: "IBMPlexSans";
+  font-size: 48px;
+  color: #060a24;
+  letter-spacing: 0;
+}
+
+.topics .images-topics {
+  margin: 0% 13.9%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.topics .images-topics img {
+  margin-bottom: 8%;
+}
+
+.topics .images-topics h3 {
+  font-family: "IBMPlexSans-SemiBold";
+  font-size: 24px;
+  color: #060a24;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.topics .images-topics .text-img {
+  text-align: center;
+}
+
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  .topics {
+    margin-top: 15%;
+  }
+  .topics h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin: 0% 6%;
+  }
+  .topics .images-topics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .topics .images-topics h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .topics .images-topics .text-img {
+    padding: 13%;
+  }
+}
+
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .topics {
+    margin-top: 13%;
+  }
+  .topics h2 {
+    font-size: 40px;
+    line-height: 42px;
+    margin: 0% 6%;
+  }
+  .topics .images-topics {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .topics .images-topics h3 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .topics .images-topics .text-img {
+    padding: 13%;
+  }
+}
+
+/*-----------------Tablet landscape section----------------------*/
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .topics h2 {
+    font-size: 44px;
+    margin-left: 10%;
+  }
+  .topics .text-img {
+    text-align: center;
+    margin: 0% 2%;
+  }
+  .topics .text-img h3 {
+    font-size: 20px;
+  }
+}
+
+/*-------------------------NEWS SECTION------------------------------------*/
+.news {
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  -webkit-clip-path: polygon(0 140px, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 140px, 100% 0, 100% 100%, 0 100%);
+  padding-top: 17%;
+  padding-bottom: 11%;
+}
+
+.news h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3%;
+  font-family: "IBMPlexSans";
+  font-size: 48px;
+  color: #060a24;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.news .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  .news {
+    -webkit-clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+  }
+  .news h2 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 10%;
+    padding: 0 5%;
+  }
+  .news .button {
+    margin-bottom: 13%;
+    margin: 0% 5%;
+  }
+}
+
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .news {
+    -webkit-clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 80px, 100% 0, 100% 100%, 0 100%);
+  }
+  .news h2 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+  .news .button {
+    margin-bottom: 13%;
+    margin: 0% 5%;
+  }
+}
+
+/*-------------------------FOOTER SECTION------------------------------------*/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2% 5%;
+}
+
+footer p {
+  font-family: "IBMPlexMono";
+  text-align: justify;
+  font-size: 16px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.social i {
+  font-size: 18px;
+  color: #060a24;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+/*-----------------Mobile and Tablet portrait section----------------------*/
+@media screen and (max-width: 900px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10% 5%;
+  }
+  footer p {
+    font-size: 14px;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+  .social {
+    width: 90%;
+  }
+  .social i {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

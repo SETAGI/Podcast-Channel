@@ -1,0 +1,148 @@
+/*----------------------------------INTRODUCTION SECTION-----------------------------------*/
+.hero {
+  position: relative;
+  z-index: -1; //this index help us to keep the position of the menu ahead
+  margin: 3% 13%;
+  margin-top: 6.3%;
+  max-width: 100%;
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    @include style-main-title-desk;
+    font-size: 64px;
+  }
+
+  P {
+    max-width: 56.1%;
+    margin-top: 1%;
+    padding-left: 0.2%;
+    @include style-paragraphs;
+  }
+}
+
+.button {
+  margin: 0% 13%;
+  margin-bottom: 6.3%;
+  height: auto;
+  display: flex;
+
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    background-color: $color-back-buttons;
+    color: $color-font-primary;
+    @include style-text-buttons;
+    padding: 1% 4%;
+
+    &:hover {
+      color: $color-font-secondary;
+      background-image: $color-back-h-buttons;
+      transition: all 0.5s;
+    }
+  }
+}
+
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  .hero {
+    margin: 0% 5%;
+
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+      margin-bottom: 10%;
+      @include style-main-title-desk;
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    p {
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 10%;
+    }
+  }
+
+  .button {
+    margin: 0% 5%;
+    margin-bottom: 12%;
+
+    a {
+      width: 100%;
+      line-height: 22px;
+      font-size: 16px;
+      text-align: center;
+      padding: 5% 0%;
+    }
+  }
+}
+
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .hero {
+    margin: 0% 5%;
+
+    .desktop {
+      display: block;
+      margin-bottom: 5%;
+      font-size: 37px;
+      line-height: 42px;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    p {
+      max-width: 85%;
+      font-size: 15px;
+      line-height: 22px;
+      margin-bottom: 6%;
+    }
+  }
+
+  .button {
+    margin: 0% 5%;
+    margin-bottom: 10%;
+
+    a {
+      width: 100%;
+      line-height: 22px;
+      font-size: 17px;
+      text-align: center;
+      padding: 2.5% 0%;
+    }
+  }
+}
+
+/*-----------------Tablet landscape section----------------------*/
+@media screen and (min-width: 900px) and (max-width: 1255px) {
+  .hero {
+    margin: 3% 10%;
+
+    .mobile {
+      display: none;
+    }
+
+    .desktop {
+      font-size: 49px;
+    }
+
+    P {
+      max-width: 65%;
+    }
+  }
+
+  .button {
+    margin: 0% 10%;
+    margin-bottom: 6.3%;
+  }
+}

@@ -1,0 +1,42 @@
+/*-------------------------FOOTER SECTION------------------------------------*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2% 5%;
+
+  p {
+    @include style-paragraphs;
+  }
+}
+
+.social {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+
+  i {
+    @include style-icons;
+  }
+}
+/*-----------------Mobile and Tablet portrait section----------------------*/
+@media screen and (max-width: 900px) {
+  footer {
+    flex-direction: column;
+    margin: 10% 5%;
+
+    p {
+      font-size: 14px;
+      margin-bottom: 5%;
+      text-align: center;
+    }
+  }
+
+  .social {
+    width: 90%;
+
+    i {
+      font-size: 16px;
+    }
+  }
+}

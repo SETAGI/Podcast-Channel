@@ -1,0 +1,96 @@
+/*---------------------------------------DROPDOWN MENU------------------------------------ */
+header {
+  margin-bottom: 8%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1%;
+  position: relative;
+
+  img {
+    //Logo//
+    width: 36px;
+    position: absolute;
+    top: 10px;
+    left: 5%;
+  }
+
+  label {
+    //Icons-FontAwesome//
+    cursor: pointer;
+    display: none;
+  }
+}
+
+#btn-menu {
+  //Input//
+  display: none;
+}
+
+.menu {
+  padding-right: 5%;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+
+  a {
+    display: block;
+    padding: 15px;
+    line-height: 24px;
+    text-decoration: none;
+    @include style-paragraphs;
+
+    &:hover {
+      text-decoration: line-through;
+      color: $color-back-buttons;
+      transition: all 0.5s;
+    }
+
+    &:active {
+      color: $color-font-active-menu;
+      text-decoration: line-through;
+      transition: all 0.5s;
+    }
+  }
+}
+
+/*-----------------Mobile section----------------------*/
+@media screen and (max-width: 599px) {
+  header {
+    @include menu-open_and_menu-close_behavior;
+
+    img {
+      width: 24px;
+    }
+
+    .fa-times {
+      font-size: 23px;
+    }
+
+    .fa-bars {
+      font-size: 23px;
+    }
+  }
+
+  @include menu-behavior-phones-tabletsPortrait;
+}
+
+/*-----------------Tablet portrait section----------------------*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  header {
+    @include menu-open_and_menu-close_behavior;
+
+    img {
+      top: 2px;
+    }
+    .fa-times {
+      font-size: 40px;
+    }
+    .fa-bars {
+      font-size: 30px;
+    }
+  }
+  @include menu-behavior-phones-tabletsPortrait;
+}

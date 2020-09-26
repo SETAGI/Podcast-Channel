@@ -1,0 +1,187 @@
+/*---------Font-Colors----------*/
+
+$color-font-primary: #060a24;
+$color-font-secondary: #ffffff;
+$color-font-active-menu: rgb(153, 150, 150);
+
+/*----------background----------*/
+
+$color-back-sections: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+$color-back-h-buttons: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+$color-back-buttons: #00f3bb;
+$color-back-Menu: #0000ec;
+
+/*Fonts*/
+
+$font-IBMP-Sans: "IBMPlexSans";
+$font-IBMP-Sans-SB: "IBMPlexSans-SemiBold";
+$font-IBMP-Mono: "IBMPlexMono";
+$font-IBMP-Mono-M: "IBMPlexMono-Medium";
+
+/*-----Complete Styles for fonts---*/
+
+@mixin style-main-title-desk {
+  font-family: $font-IBMP-Sans;
+  font-size: 64px;
+  color: $color-font-primary;
+  letter-spacing: 0;
+}
+
+@mixin style-sub-titles-desk {
+  font-family: $font-IBMP-Sans;
+  font-size: 48px;
+  color: $color-font-primary;
+  letter-spacing: 0;
+}
+
+@mixin style-paragraphs {
+  font-family: $font-IBMP-Mono;
+  text-align: justify;
+  font-size: 16px;
+  color: $color-font-primary;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+@mixin style-text-buttons {
+  font-family: $font-IBMP-Mono-M;
+  font-size: 18px;
+  color: $color-font-primary;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 24px;
+}
+
+@mixin style-text-icon-news {
+  font-family: $font-IBMP-Sans-SB;
+  font-size: 24px;
+  color: $color-font-primary;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@mixin style-icons {
+  font-size: 18px;
+  color: $color-font-primary;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+/*------------------------Mixins for Menu Section------------------------*/
+
+/*Icons "menu open" and "menu close" behavior*/
+@mixin menu-open_and_menu-close_behavior {
+  height: 44px;
+  display: flex;
+  align-items: center;
+
+  .menu-close {
+    display: none;
+    margin-right: 4%;
+  }
+
+  .menu-open {
+    display: block;
+    margin-right: 4%;
+  }
+}
+
+/* Menu behavior on Phones and Tablets portrait mode*/
+
+@mixin menu-behavior-phones-tabletsPortrait {
+  .menu {
+    position: absolute;
+    padding: 0;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    color: $color-font-secondary;
+    margin-left: -200%;
+    transition: all 0.6s;
+  }
+  #btn-menu:checked ~ .menu {
+    margin: 0;
+  }
+
+  #btn-menu:checked ~ .menu-open {
+    display: none;
+  }
+
+  #btn-menu:checked ~ .menu-close {
+    display: block;
+  }
+
+  .list {
+    flex-direction: column;
+    background-color: $color-back-Menu;
+
+    a {
+      color: $color-font-secondary;
+    }
+  }
+}
+
+/*--Complete behavior in phones and tablets portrait mode -  podcast section--*/
+
+@mixin podcast-section-behavior {
+  .podcast-section {
+    h2 {
+      font-size: 36px;
+      line-height: 42px;
+      padding-top: 5%;
+      margin: 6%;
+    }
+
+    .podcasts {
+      display: block;
+      padding-bottom: 20%;
+      margin: 0% 4%;
+
+      iframe {
+        padding: 2% 0%;
+      }
+    }
+  }
+}
+
+/*------------------------Mixin for history section------------------------*/
+/*appearance of container  and text on Phones and Tablets portrait mode*/
+@mixin container-and-text-appearance {
+  display: flex;
+  flex-direction: column;
+
+  .text {
+    width: 100%;
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: justify;
+      margin: 5%;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 42px;
+      margin: 5%;
+    }
+  }
+}
+
+/*------------------------Mixin for topics section------------------------*/
+/*appearance of images on Phones and Tablets portrait mode*/
+@mixin appearance-of-images {
+  .images-topics {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .text-img {
+      padding: 13%;
+    }
+  }
+}
