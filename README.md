@@ -2,7 +2,7 @@
 
 ## Description:
 
-This project is about a web application made entirely with CSS3 (Sass) & HTML5, this was the first application made for the full stack web development career at ACAMICA.
+This is a project based in the responsive web design method and it is about a web application made entirely with CSS3 (Sass) & HTML5, this was the first application made for the full stack web development career at ACAMICA.
 
 ## Technologies used:
 
